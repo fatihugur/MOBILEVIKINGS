@@ -4,6 +4,7 @@ import be.mobilevikings.base.ConfigReader;
 import be.mobilevikings.pages.HomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
@@ -43,5 +44,31 @@ public class HomePageSD {
     public void clickAcceptCookiesButton() throws InterruptedException{
         HomePage.clickAcceptCookiesButton();
         Thread.sleep(3000);
+    }
+    //  User Click Viking Clan Button from HomePage
+    @And("Test Viking Clan page button")
+    public void testVikingClanPageButton()throws InterruptedException{
+        HomePage.clickVikingClanButton();
+        Thread.sleep(3000);
+    }
+    // After clicking Viking Clan Menu Button user sees Viking Clan Page
+    @Then("User sees Viking Clan page")
+    public void userSeesVikingClanPage() {
+        String expectedURL = "https://mobilevikings.be/nl/viking-clan/";
+        Assert.assertEquals(expectedURL, HomePage.verifyURL());
+        System.out.println("Expected URL for Viking Clan Page: " + HomePage.verifyURL());
+    }
+    //  User Click Viking Deals Menu Button from Viking Clan Page
+    @And("Test Vikings Deals page button")
+    public void testVikingsDealsPageButton() throws InterruptedException{
+        HomePage.clickVikingDealsButton();
+        Thread.sleep(3000);
+    }
+    // After clicking Viking Deals Button user sees Viking Deals Page
+    @Then("User sees Vikings Deals page")
+    public void userSeesVikingsDealsPage() {
+        String expectedURL = "https://mobilevikings.be/nl/viking-deals/";
+        Assert.assertEquals(expectedURL, HomePage.verifyURL());
+        System.out.println("Expected URL for Viking Deals Page: " + HomePage.verifyURL());
     }
 }

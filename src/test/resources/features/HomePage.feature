@@ -7,6 +7,11 @@ Feature: Home Page Test
     And get home page title
     And verify if title is expected
     And click Accept Cookies Button
+    And Test Viking Clan page button
+    Then User sees Viking Clan page
+    And Test Vikings Deals page button
+    Then User sees Vikings Deals page
+
 
     # MOBILEVIKINGS.BE UI Test Checking Lijst - Functional Test Case
     # HOMEPAGE TEST -- FIRST

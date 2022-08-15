@@ -20,10 +20,14 @@ public class HomePage {
     public static WebElement mobileVikingsLogo;
 
     // xpath mobilevikings.be Viking Clan menu button
-    //
-    @FindBy(xpath="")
+    // /html/body/header/div[3]/div/div[1]/nav/ul/li[5]/a
+    @FindBy(xpath="/html/body/header/div[3]/div/div[1]/nav/ul/li[5]/a")
     public static WebElement vikingClanButton;
 
+    // xpath mobilevikings.be Viking Deals menu button
+    // /html/body/header/div[3]/div/div[1]/nav/ul/li[4]/a
+    @FindBy(xpath="/html/body/header/div[3]/div/div[1]/nav/ul/li[4]/a")
+    public static WebElement vikingDealsButton;
     // PageFactory
     public HomePage(){
         PageFactory.initElements(driver, this);
@@ -40,5 +44,19 @@ public class HomePage {
     public static void clickAcceptCookiesButton(){
         HelperMethods.doClick(acceptCookiesButton);
     };
+
+    // CLICK VIKING CLAN MENU BUTTON
+    public static void clickVikingClanButton() throws InterruptedException{
+        Thread.sleep(2000);
+        System.out.println(vikingClanButton.getText());
+        HelperMethods.doClick(vikingClanButton);
+    }
+
+    // CLICK VIKING DEALS MENU BUTTON
+    public static void clickVikingDealsButton() throws InterruptedException{
+        Thread.sleep(2000);
+        System.out.println(vikingDealsButton.getText());
+        HelperMethods.doClick(vikingDealsButton);
+    }
 
 }
