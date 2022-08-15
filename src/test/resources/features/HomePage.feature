@@ -6,10 +6,11 @@ Feature: Home Page Test
     And verify if url is expected
     And get home page title
     And verify if title is expected
+    And click Accept Cookies Button
 
     # MOBILEVIKINGS.BE UI Test Checking Lijst - Functional Test Case
     # HOMEPAGE TEST -- FIRST
-#1. Open de site https://mobilevikings.be/nl/ test home page url, home page title, and MobileVikings logo
+#1. Open de site https://mobilevikings.be/nl/ test home page url, home page title, and MobileVikings logo and accept cookies button
 #2. Controleer als de knop "Viking Clan" button" aanwezig is en click het
 #3. Controleer als de knop "Viking Deals button" aanwezig is en click het
 

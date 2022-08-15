@@ -11,7 +11,11 @@ public class HomePage {
     // xpath mobilevikings.be logo
     // //*[@id="header"]/div/div[1]/a
 
-    //@FindBy(id="header")
+    //Mobile Vikingis Home Page Accept Cookies Button
+    @FindBy(id="btn-accept-cookies")
+    public static WebElement acceptCookiesButton;
+
+    // Mobile Vikings Web Page Logo
     @FindBy(xpath="/html/body/header/div[3]/div/div[1]/a")
     public static WebElement mobileVikingsLogo;
 
@@ -33,6 +37,8 @@ public class HomePage {
     public static String verifyURL(){
         return HelperMethods.getCurrentURL();
     }
-
+    public static void clickAcceptCookiesButton(){
+        HelperMethods.doClick(acceptCookiesButton);
+    };
 
 }

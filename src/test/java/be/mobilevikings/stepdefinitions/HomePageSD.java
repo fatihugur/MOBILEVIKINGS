@@ -28,7 +28,7 @@ public class HomePageSD {
     //Testing Mobile Vikings HomePage Page Title
     @And("get home page title")
     public void getHomePageTitle() throws InterruptedException {
-        System.out.println(" Expected Title: " + HomePage.getHomepageTitle());
+        System.out.println("Expected Title: " + HomePage.getHomepageTitle());
         Thread.sleep(2000);
     }
     //Testing Mobile Vikings HomePage expected Title
@@ -37,5 +37,11 @@ public class HomePageSD {
         String expectedTitle = "Mobile Vikings | Scherpste prijs voor mobiel & thuis internet";
         Assert.assertEquals(expectedTitle, HomePage.getHomepageTitle());
         Thread.sleep(2000);
+    }
+    // When Popup opens > click Accept Cookies Button
+    @And("click Accept Cookies Button")
+    public void clickAcceptCookiesButton() throws InterruptedException{
+        HomePage.clickAcceptCookiesButton();
+        Thread.sleep(3000);
     }
 }
